@@ -1,2 +1,3 @@
-mod models;
 mod enums;
+mod models;
+mod util;

@@ -4,6 +4,7 @@ use std::{
 };
 
 use super::message::Message;
+use crate::util::util::random_token;
 
 pub struct MessageQueue {
     last_read_at: u128,
@@ -13,7 +14,7 @@ pub struct MessageQueue {
 }
 
 impl MessageQueue {
-    pub fn new(&self) -> Self {
+    pub fn new() -> Self {
         Self {
             last_read_at: SystemTime::now()
                 .duration_since(UNIX_EPOCH)
@@ -45,5 +46,9 @@ impl MessageQueue {
             return Some(msg);
         }
         return None;
+    }
+
+    pub fn generate_client_id() {
+        return random_token();
     }
 }

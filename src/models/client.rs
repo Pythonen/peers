@@ -5,7 +5,7 @@ use std::{
 
 use tungstenite::protocol::{Message, WebSocket};
 
-struct Client {
+pub struct Client {
     id: String,
     token: String,
     socket: Option<WebSocket<TcpStream>>,

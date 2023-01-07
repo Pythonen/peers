@@ -1,2 +1,2 @@
-# peers (WIP)
+# Peers (WIP)
 Rust PeerJS implementation
